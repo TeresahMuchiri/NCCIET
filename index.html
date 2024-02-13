@@ -6,8 +6,17 @@
 <title>NCCIET.com</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<style>
+    img {
+        width: 200px; 
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+</style>
+<body background="background.jpg">
 <div class="container">
+    <img src="logo.png" alt="Company Logo">
     <h1>NYERI CONSTRUCTION COMPANY<br>
     INCOME AND EXPENDITURE TRACKER</h1>
     <form action="#">
@@ -16,58 +25,9 @@
         <input type="submit" value="Login">
     </form>
     <div class="signup-link">
-        <p>You're new here? <a href="#">Sign Up</a></p>
+        <p>You're new here? <a href="signup.html">Sign Up</a></p>
     </div>
 </div>
-<div class="signup-page">
-    <h1>Sign Up Page</h1>
-    <form action="#">
-        <input type="text" placeholder="Enter your name" required>
-        <input type="position" placeholder="Enter your work position" required>
-        <input type="phone" placeholder="Enter your phone number" required>
-        <input type="password" placeholder="Enter your password" required>
-        <input type="cpassword" placeholder="Confirm your password" required>
-        <input type="submit" value="Sign Up">
-    </form>
-</div>
-<div class="dashboard">
-    <h1>What do you want to do today?</h1>
-    <div class="buttons">
-        <button onclick="window.location.href='enter_income.html'">Enter Project Income</button><br>
-        <button onclick="window.location.href='enter_expenditure.html'">Enter Monthly Expenditure</button><br>
-        <button onclick="window.location.href='generate_totals.html'">Generate Totals</button><br>
-        <button onclick="window.location.href='generate_analytics.html'">Generate Analytics</button>
-    </div>
-</div>
-    <div class="expenses">
-        <h1>Monthly Expenses</h1>
-        <div class="expenditure" id="expenditure">
-            <form action="#" id="expenditureForm">
-                <label for="month">Month:</label>
-                <input type="text" id="month" name="month" required>
-    
-                <label for="salaries">Salaries Paid:</label>
-                <input type="number" id="salaries" name="salaries" required>
-    
-                <label for="materials">Materials Used:</label>
-                <input type="number" id="materials" name="materials" required>
-    
-                <label for="rent">Rent Paid:</label>
-                <input type="number" id="rent" name="rent" required>
-    
-                <label for="taxes">Taxes:</label>
-                <input type="number" id="taxes" name="taxes" required>
-    
-                <label for="licenses">Licenses Paid:</label>
-                <input type="number" id="licenses" name="licenses" required>
-    
-                <label for="overhead">Overhead Costs:</label>
-                <input type="number" id="overhead" name="overhead" required>
-    
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>    
 <script src="script.js"></script>
 </body>
 </html>

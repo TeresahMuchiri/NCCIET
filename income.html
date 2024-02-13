@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCCIET.com</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body background="background.jpg">
+    <div class="income">
+        <h1>Project Income</h1>
+        <div class="monthlyincome" id="monthlyincome">
+            <form action="#" id="incomeForm">
+                <label for="month">Month:</label>
+                <input type="text" id="month" name="month" required>
+    
+                <label for="sales">Sale services from the project:</label>
+                <input type="number" id="sales" name="sales" required>
+    
+                <label for="construction">Construction Services:</label>
+                <input type="number" id="construction" name="construction" required>
+                
+                <button onclick="calculate()">Total</button>
+                
+                <label for="total">Month Total:</label>
+                <div id="result"></div>
+                <input type="submit" value="Submit">
+            </form>
+            <script>
+                function calculate() {
+                   
+                    var num1 = document.getElementById("sales").value;
+                    var num2 = document.getElementById("construction").value;
+                    
+                    var sum = parseFloat(num1) + parseFloat(num2);
+                    
+                    document.getElementById("result").innerHTML = "Sum: " + sum;
+                }
+                </script>
+        </div>
+    </div>    
+</body>
