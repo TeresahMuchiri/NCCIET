@@ -1,39 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NCCIET.com</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>NCCIET.com</title>
 </head>
-<body background="background.jpg">
-    <div class="expenses">
-        <h1>Monthly Expenses</h1>
-        <div class="expenditure" id="expenditure">
-            <form action="#" id="expenditureForm">
-                <label for="month">Month:</label>
-                <input type="text" id="month" name="month" required>
+
+<body>
+    <header>
+        <h2>Nyeri Construction Company Income and Expenditure Tracker</h2>
+    </header>
     
-                <label for="salaries">Salaries Paid:</label>
-                <input type="number" id="salaries" name="salaries" required>
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">$0.00</h1>
     
-                <label for="materials">Materials Used:</label>
-                <input type="number" id="materials" name="materials" required>
-    
-                <label for="rent">Rent Paid:</label>
-                <input type="number" id="rent" name="rent" required>
-    
-                <label for="taxes">Taxes:</label>
-                <input type="number" id="taxes" name="taxes" required>
-    
-                <label for="licenses">Licenses Paid:</label>
-                <input type="number" id="licenses" name="licenses" required>
-    
-                <label for="overhead">Overhead Costs:</label>
-                <input type="number" id="overhead" name="overhead" required>
-    
-                <input type="submit" value="Submit">
-            </form>
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus">+$0.00</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money minus">-$0.00</p>
+            </div>
         </div>
-    </div>    
+    
+        <h3>History</h3>
+        <ul id="list" class="list">
+            
+        </ul>
+    
+        <h3>Add new transaction</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Name</label>
+                <input type="text" id="text" placeholder="Enter name of transaction..." />
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount <br />
+                </label>
+                <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <button class="btn">Add transaction</button>
+        </form>
+    </div>
+    <script src="expense.js"></script>
 </body>
+
+</html>
