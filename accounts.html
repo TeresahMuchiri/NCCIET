@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="accounts.css">
+<title>NCCIET.com</title>
+</head>
+<body>
+<div class="container">
+  <h1>Nyeri Construction Company</h1>
+  <button id="accountsBtn">View Accounts</button>
+  <div id="accountsData"></div>
+</div>
+
+<script>
+document.getElementById('accountsBtn').addEventListener('click', function() {
+  fetch('getaccounts.php')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('accountsData').innerHTML = data;
+    });
+});
+</script>
+</body>
+</html>
