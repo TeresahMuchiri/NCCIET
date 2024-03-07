@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Construction Company Analytics</title>
+<title>NCCIET.com</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   body {
@@ -74,6 +74,19 @@
       }
     }
   });
+  var analysisDiv = document.getElementById('analysis');
+  var lastIncome = monthlyData.income[monthlyData.income.length - 1];
+  var lastExpenditure = monthlyData.expenditure[monthlyData.expenditure.length - 1];
+
+  if (lastIncome > lastExpenditure) {
+    analysisDiv.innerHTML = "Congratulations! Your income exceeded your expenditure.";
+    analysisDiv.classList.add('profit');
+  } else if (lastIncome < lastExpenditure) {
+    analysisDiv.innerHTML = "Warning! Your expenditure exceeded your income.";
+    analysisDiv.classList.add('loss');
+  } else {
+    analysisDiv.innerHTML = "Your income equaled your expenditure.";
+  }
 </script>
 </body>
 </html>
